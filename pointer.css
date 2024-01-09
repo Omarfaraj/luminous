@@ -1,0 +1,7 @@
+.pointer {
+    width: 50px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    transform-origin: center;
+}

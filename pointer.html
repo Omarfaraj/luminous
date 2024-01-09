@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <link rel="stylesheet" href="pointer.css">
+        <body>
+           <div class="pointer"></div>
+           <script>
+            const arrow = document.querySelector('.arrow');
+
+            document.addEventListener('mousemove', (e) => {
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+                const arrowX = arrow.getBoundingClientRect().left + arrow.clientWidth / 2;
+                const arrowY = arrow.getBoundingClientRect().top + arrow.clientHeight / 2;
+                const angle = math.atan2(mouseY - arrowY, mouseX - arrowX);
+                const angleDeg = angle * (180 / math.PI);
+                arrow.style.transform = 'rotate(${angleDeg}deg)';
+            });
+           </script>
+        </body>
+    </head>
+ </html>
